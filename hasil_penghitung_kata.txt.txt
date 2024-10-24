@@ -1,0 +1,12 @@
+Teks :
+Remote Procedure Call (RPC) adalah sebuah protokol yang memungkinkan sebuah program komputer untuk mengeksekusi fungsi atau prosedur di komputer lain dalam sebuah jaringan, seolah-olah fungsi tersebut dipanggil secara lokal. RPC memungkinkan komunikasi antara aplikasi yang berjalan di sistem yang berbeda, dengan menyembunyikan detail teknis terkait jaringan, seperti alamat IP dan port, dari pengguna. Dalam implementasinya, RPC menggunakan model client-server, di mana client mengirimkan permintaan ke server untuk mengeksekusi prosedur tertentu dan server mengembalikan hasilnya ke client. Salah satu keunggulan RPC adalah kemampuannya untuk memfasilitasi komunikasi antar sistem yang heterogen, baik dari segi perangkat keras maupun perangkat lunak.
+
+Contoh nyata dari penggunaan RPC adalah dalam pengembangan layanan terdistribusi, di mana komponen sistem ditempatkan di berbagai lokasi geografis, tetapi masih dapat berinteraksi secara seamless. Dengan RPC, pengembang dapat memfokuskan perhatian pada logika bisnis tanpa harus memikirkan cara berkomunikasi antar sistem. Protokol RPC juga digunakan dalam layanan pembayaran daring, di mana sebuah aplikasi frontend berkomunikasi dengan sistem backend untuk memproses transaksi. Misalnya, saat pengguna melakukan pembayaran di sebuah aplikasi, sistem frontend akan mengirimkan permintaan RPC ke server pembayaran untuk memverifikasi dan memproses transaksi.
+
+Namun, meskipun RPC memiliki kelebihan, protokol ini juga memiliki tantangan. Salah satunya adalah ketergantungan pada ketersediaan jaringan. Jika jaringan lambat atau terputus, proses RPC dapat terganggu atau gagal. Oleh karena itu, penting untuk memperhatikan aspek keandalan dan keamanan ketika menggunakan RPC dalam aplikasi yang membutuhkan kinerja tinggi.
+
+Hitung :
+Huruf : 227
+Karakter : 1777
+Kalimat : 12
+Paragraf : 3

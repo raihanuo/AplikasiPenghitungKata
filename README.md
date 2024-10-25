@@ -13,7 +13,7 @@ Aplikasi Penghitung Kata adalah program berbasis Java yang dirancang untuk mengh
 - Menyimpan hasil penghitungan dan teks ke dalam file teks.
 - Antarmuka pengguna grafis (GUI) yang intuitif dan mudah digunakan.
 
-## Cara Menggunakan Program
+## Cara Menggunakan
 1. **Masukkan Teks**: Ketik atau salin teks ke dalam area teks yang disediakan.
 2. **Hitung**: Klik tombol "Hitung" untuk menghitung jumlah kata, karakter, kalimat, dan paragraf. Hasilnya akan ditampilkan di label yang sesuai.
 3. **Cari Kata**: Ketik kata yang ingin dicari di field pencarian dan klik tombol "Cari". Jumlah kemunculan kata tersebut dalam teks akan ditampilkan.
@@ -25,13 +25,17 @@ Aplikasi Penghitung Kata adalah program berbasis Java yang dirancang untuk mengh
 - **IDE**: NetBeans atau IDE Java lainnya
 - **Sistem Operasi**: Dapat dijalankan di semua sistem operasi yang mendukung Java
 
-## Keunggulan Program
+## Keunggulan
 - **User-Friendly**: Antarmuka grafis yang sederhana membuatnya mudah digunakan oleh semua kalangan.
 - **Real-Time Updates**: Hasil penghitungan diperbarui secara otomatis saat pengguna mengetik di area teks.
 - **Fleksibilitas**: Program dapat digunakan untuk berbagai keperluan, mulai dari penulisan, pengeditan, hingga analisis teks.
 
+## Screenshot
+_Akan ditambahkan nanti_
+
 ## Cara Menjalankan Program
-1. **Persyaratan**: Pastikan Anda telah menginstal Java Development Kit (JDK) di komputer Anda.
-2. **Kompilasi**: Buka terminal atau command prompt, navigasikan ke direktori proyek, dan jalankan perintah berikut untuk mengompilasi program:
+1. Pastikan Anda memiliki **Java Development Kit (JDK)** terinstal di sistem Anda.
+2. Clone repositori ini ke mesin lokal Anda.
    ```bash
-   javac NewJFrame.java
+   git clone https://github.com/username/repo-name.git
+3. Jalankan aplikasi dengan mengkompilasi dan mengeksekusi file `NewJFrame.java`.

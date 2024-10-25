@@ -31,7 +31,8 @@ Aplikasi Penghitung Kata adalah program berbasis Java yang dirancang untuk mengh
 - **Fleksibilitas**: Program dapat digunakan untuk berbagai keperluan, mulai dari penulisan, pengeditan, hingga analisis teks.
 
 ## Screenshot
-_Akan ditambahkan nanti_
+![8](https://github.com/user-attachments/assets/703f8432-f81c-4ae7-a536-8f3cbb30d670)
+![8_](https://github.com/user-attachments/assets/6776fd5f-a58a-4fc8-9410-bc0a3cb43a48)
 
 ## Cara Menjalankan Program
 1. Pastikan Anda memiliki **Java Development Kit (JDK)** terinstal di sistem Anda.

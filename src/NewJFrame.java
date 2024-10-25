@@ -197,7 +197,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         String[] kata = text.split("\\s+");
         int jumlahKata = text.isEmpty() ? 0 : kata.length;
-        labelKata.setText("Huruf : " + jumlahKata);
+        labelKata.setText("Kata : " + jumlahKata);
         
         int jumlahKarakter = text.length();
         labelKarakter.setText("Karakter : " + jumlahKarakter);

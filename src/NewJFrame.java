@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import javax.swing.JOptionPane;
-import javax.swing.event.DocumentEvent;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -234,7 +233,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         labelKalimat.getText() + "\n" +
                         labelParagraf.getText();
 
-        try (FileWriter writer = new FileWriter("hasil_penghitung_kata.txt.txt")) {
+        try (FileWriter writer = new FileWriter("hasil_penghitung_kata.txt")) {
             writer.write("Teks :\n" + text + "\n\nHitung :\n" + counts);
             JOptionPane.showMessageDialog(this, "Tersimpan di hasil_penghitung_kata.txt");
         } catch (IOException e) {

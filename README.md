@@ -36,5 +36,5 @@ Aplikasi ini adalah program Java berbasis GUI yang dirancang untuk menghitung ju
 1. Pastikan Anda memiliki **Java Development Kit (JDK)** terinstal di sistem Anda.
 2. Clone repositori ini ke mesin lokal Anda.
    ```bash
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/raihanuo/AplikasiPenghitungKata.git
 3. Jalankan aplikasi dengan mengkompilasi dan mengeksekusi file `NewJFrame.java`.

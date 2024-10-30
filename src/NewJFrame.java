@@ -1,15 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import javax.swing.JOptionPane;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
@@ -192,57 +191,86 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHitungActionPerformed
+    private void hitung() {
+        // Mengambil teks dari textArea
         String text = textArea.getText();
 
+        // Memisahkan teks menjadi kata-kata berdasarkan spasi
         String[] kata = text.split("\\s+");
+        // Menghitung jumlah kata, jika teks kosong maka jumlah kata 0
         int jumlahKata = text.isEmpty() ? 0 : kata.length;
+        // Menampilkan jumlah kata pada label
         labelKata.setText("Kata : " + jumlahKata);
-        
+
+        // Menghitung jumlah karakter dalam teks
         int jumlahKarakter = text.length();
+        // Menampilkan jumlah karakter pada label
         labelKarakter.setText("Karakter : " + jumlahKarakter);
 
+        // Memisahkan teks menjadi kalimat berdasarkan tanda baca (.!?)
         String[] kalimat = text.split("[.!?]\\s*");
+        // Menghitung jumlah kalimat, jika teks kosong maka jumlah kalimat 0
         int jumlahKalimat = text.isEmpty() ? 0 : kalimat.length;
+        // Menampilkan jumlah kalimat pada label
         labelKalimat.setText("Kalimat : " + jumlahKalimat);
 
+        // Memisahkan teks menjadi paragraf berdasarkan baris baru
         String[] paragraf = text.split("\\n+");
+        // Menghitung jumlah paragraf, jika teks kosong maka jumlah paragraf 0
         int jumlahParagraf = text.isEmpty() ? 0 : paragraf.length;
+        // Menampilkan jumlah paragraf pada label
         labelParagraf.setText("Paragraf : " + jumlahParagraf);
+    }
+    
+    private void buttonHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHitungActionPerformed
+        // Memanggil metode hitung saat tombol "Hitung" ditekan
+        hitung();
     }//GEN-LAST:event_buttonHitungActionPerformed
 
     private void buttonCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCariActionPerformed
+        // Mengambil kata yang dicari dari textField
         String kataPencarian = textFieldCari.getText();
+        // Mengambil teks dari textArea
         String text = textArea.getText();
 
+        // Membuat pola pencarian untuk kata yang dicari, mengabaikan huruf besar/kecil
         Pattern pola = Pattern.compile("\\b" + kataPencarian + "\\b", Pattern.CASE_INSENSITIVE);
+        // Mencocokkan pola dengan teks
         Matcher pencocokan = pola.matcher(text);
 
+        // Menghitung jumlah kecocokan kata yang ditemukan
         int cocok = 0;
         while (pencocokan.find()) {
             cocok++;
         }
 
+        // Menampilkan hasil pencarian pada label
         labelPencarian.setText("Hasil Pencarian : " + cocok + " Kata Ditemukan");
     }//GEN-LAST:event_buttonCariActionPerformed
 
     private void buttonSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSimpanActionPerformed
+        // Mengambil teks dari textArea
         String text = textArea.getText();
+        // Mengambil hasil hitung dari label
         String counts = labelKata.getText() + "\n" +
                         labelKarakter.getText() + "\n" +
                         labelKalimat.getText() + "\n" +
                         labelParagraf.getText();
 
+        // Menyimpan teks dan hasil hitung ke dalam file
         try (FileWriter writer = new FileWriter("hasil_penghitung_kata.txt")) {
             writer.write("Teks :\n" + text + "\n\nHitung :\n" + counts);
+            // Menampilkan pesan bahwa file berhasil disimpan
             JOptionPane.showMessageDialog(this, "Tersimpan di hasil_penghitung_kata.txt");
         } catch (IOException e) {
+            // Menampilkan pesan error jika terjadi kesalahan saat menyimpan
             JOptionPane.showMessageDialog(this, "Terjadi error ketika menyimpan file!");
         }
     }//GEN-LAST:event_buttonSimpanActionPerformed
 
     private void textAreaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textAreaKeyTyped
-        buttonHitung.doClick();
+        // Memanggil metode hitung setiap kali ada karakter yang diketik di textArea
+        hitung();
     }//GEN-LAST:event_textAreaKeyTyped
     
     /**
